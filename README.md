@@ -1,11 +1,22 @@
-# medical_dataset_for_customization
+# Medical Dataset for Fine-Tuning
 
-The task is to compile a disease-representative dataset for training a large language model on medicine based on translation detalizations of specific clients. To accomplish this task, I decided to compile a list of drugs mentioned in clients' translations, indicating their trade name, international nonproprietary name, diseases to treat, and the group of diseases to which they belong. Thus it is possible to select segments where drug names occur and collect statistics on which diseases or disease groups prevail in the translation detalizations and collect a list of representative orders whose translations can be used for customization.
+This repository focuses on compiling a comprehensive, disease-representative dataset for training large language models in the medical field. The dataset is derived from detailed translation memories provided by specific clients. The goal is to extract and analyze drug mentions, including trade names, international nonproprietary names (INNs), associated diseases, and disease groups.
 
-Input: an excel-file of translation segments with customer and order numbers for each segment.
-Output: 
+Workflow Overview
+1. retrieve_medical_entities.ipynb:
 
-The following steps were needed to accomplish the task:
-1) Selecting a python library to retrieve medical entities, among which will be trade names of drugs. Retrieving medical entities.
-2) By means of GPT, selecting trade names of drugs from the list of medical entities and specifying their international nonproprietary names, diseases to treat, and the group of diseases to which they belong.
-3) From the translation detalizations, selecting segments where either the trade name of the drug or the international nonproprietary name occurs, and for each segment add columns with the trade name, the international nonproprietary of the drug and the group of diseases. Obtaining statistics on which groups prevail and the order numbers where they are mentioned.
+Objective: Extract medical entities, including drug trade names.
+Inputs: List of medical/non-medical entities to test libriaries for extraction, detailed translation memory (source segment, target segment, client name, order number).
+Outputs: Augmented translation memory with medical entities, clean list of medical entities.
+
+2. compile_drug_portfolio.ipynb:
+
+Objective: Identify and catalog drug trade names, INNs, treatment indications, and disease groups.
+Inputs: Clean list of medical entities from the previous step.
+Outputs: Drug portfolio with columns: Manufacturer, Trade name, INN, Indications, Disease group.
+
+3. drug_portfolio_stats.ipynb:
+
+Objective: Analyze translation memory for segments containing drug names and compile statistics on prevalent disease groups.
+Inputs: Drug portfolio from compile_drug_portfolio.ipynb, augmented translation memory from retrieve_medical_entities.ipynb.
+Outputs: Detailed translation memory with added drug information, disease group statistics for dataset customization.
