@@ -15,7 +15,7 @@ Outputs: Augmented translation memory with medical entities, clean list of medic
 
 Objective: Identify and catalog drug trade names, INNs, treatment indications, and disease groups.
 
-Inputs: Clean list of medical entities from the previous step.
+Inputs: Clean list of medical entities from extract_medical_entities.ipynb.
 
 Outputs: Drug portfolio with columns: Manufacturer, Trade name, INN, Indications, Disease group.
 
@@ -23,6 +23,6 @@ Outputs: Drug portfolio with columns: Manufacturer, Trade name, INN, Indications
 
 Objective: Analyze translation memory for segments containing drug names and compile statistics on prevalent disease groups.
 
-Inputs: Drug portfolio from compile_drug_portfolio.ipynb, augmented translation memory from retrieve_medical_entities.ipynb.
+Inputs: Drug portfolio from compile_drug_portfolio.ipynb, augmented translation memory from extract_medical_entities.ipynb.
 
 Outputs: Detailed translation memory with added drug information, disease group statistics for dataset customization.
