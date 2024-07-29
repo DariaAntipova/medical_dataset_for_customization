@@ -7,7 +7,7 @@ This project focuses on compiling a comprehensive, disease-representative datase
 
 Objective: Extract medical entities, including drug trade names.
 
-Inputs: List of medical/non-medical entities to test libriaries for extraction, detailed translation memory (source segment, target segment, client name, order number).
+Inputs: List of medical/non-medical entities to test libraries for extraction, detailed translation memory (source segment, target segment, client name, order number).
 
 Outputs: Augmented translation memory with medical entities, clean list of medical entities.
 
