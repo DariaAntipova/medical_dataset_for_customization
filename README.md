@@ -1,6 +1,6 @@
 # Medical Dataset for Fine-Tuning
 
-This repository focuses on compiling a comprehensive, disease-representative dataset for training large language models in the medical field. The dataset is derived from detailed translation memories provided by specific clients. The goal is to extract and analyze drug mentions, including trade names, international nonproprietary names (INNs), associated diseases, and disease groups.
+This project focuses on compiling a comprehensive, disease-representative dataset for training large language models in the medical field. The dataset is derived from detailed translation memories provided by specific clients. The goal is to extract and analyze drug mentions, including trade names, international nonproprietary names (INNs), associated diseases, and disease groups.
 
 ## Workflow Overview
 1. extract_medical_entities.ipynb:
